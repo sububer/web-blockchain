@@ -21,13 +21,13 @@ Web-blockchain applicaton will use [python](https://www.python.org/), and highli
 ## Web Application Testing and Validation
 
 **AppTesting**
-![App Testing](media/web-blockchain-usage.mov)  
+![App Testing](media/web-blockchain-usage.gif)  
 
 **Blockchain Validation**
-![Blockchain Validation](media/web-blockchain-validate.mov)  
+![Blockchain Validation](media/web-blockchain-validate.gif)  
 
 **Chain Inspector**
-![Chain Browser](media/web-blockchain-inspector.mov)
+![Chain Browser](media/web-blockchain-inspector.gif)
 
 
 ---
