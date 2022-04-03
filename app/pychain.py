@@ -163,19 +163,14 @@ pychain = setup()
 # 4. Add an input area where you can get a value for `amount` from the user.
 # 5. As part of the Add Block button functionality, update `new_block` so that `Block` consists of an attribute named `record`, which is set equal to a `Record` that contains the `sender`, `receiver`, and `amount` values. The updated `Block`should also include the attributes for `creator_id` and `prev_hash`.
 
-# @TODO:
 # Delete the `input_data` variable from the Streamlit interface.
-# input_data = st.text_input("Block Data")
 
-# @TODO:
 # Add an input area where you can get a value for `sender` from the user.
 sender = st.text_input("Sender")
 
-# @TODO:
 # Add an input area where you can get a value for `receiver` from the user.
 receiver = st.text_input("Receiver")
 
-# @TODO:
 # Add an input area where you can get a value for `amount` from the user.
 amount = st.text_input("Amount")
 
@@ -194,7 +189,7 @@ if st.button("Add Block"):
     )
 
     pychain.add_block(new_block)
-    st.snow()
+    st.balloons()
 
 ################################################################################
 # Streamlit Code (continues)
@@ -204,7 +199,7 @@ st.markdown("## The PyChain Ledger")
 pychain_df = pd.DataFrame(pychain.chain).astype(str)
 st.write(pychain_df)
 
-difficulty = st.sidebar.slider("Block Difficulty", 1, 5, 2)
+difficulty = st.sidebar.slider("Block Difficulty", 1, 5, 4)
 pychain.difficulty = difficulty
 
 st.sidebar.write("# Block Inspector")
@@ -215,7 +210,10 @@ selected_block = st.sidebar.selectbox(
 st.sidebar.write(selected_block)
 
 if st.button("Validate Chain"):
-    st.write(pychain.is_valid())
+    if pychain.is_valid():
+        st.write('Blockchain is valid!')
+    else:
+        st.write('Blockchain invalid!')
 
 ################################################################################
 # Step 4:
